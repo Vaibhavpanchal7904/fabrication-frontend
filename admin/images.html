@@ -18,18 +18,34 @@
 <button class="btn btn-dark" onclick="upload()">Upload</button>
 
 <script>
-function upload(){
-  const fd = new FormData();
-  fd.append("image", image.files[0]);
-  fd.append("category", category.value);
+const API_BASE = "https://fabrication-backend.onrender.com";
 
-  fetch("http://localhost:5000/api/images",{
-    method:"POST",
-    headers:{
-      Authorization:`Bearer ${localStorage.getItem("adminToken")}`
+function upload(){
+  const imageInput = document.getElementById("image");
+  const categoryInput = document.getElementById("category");
+
+  if (!imageInput.files.length) {
+    alert("Please select an image");
+    return;
+  }
+
+  const fd = new FormData();
+  fd.append("image", imageInput.files[0]);
+  fd.append("category", categoryInput.value);
+
+  fetch(`${API_BASE}/api/images`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("adminToken")}`
     },
     body: fd
-  }).then(()=>alert("Uploaded"));
+  })
+  .then(res => {
+    if (!res.ok) throw new Error("Upload failed");
+    return res.json();
+  })
+  .then(() => alert("Uploaded successfully ✅"))
+  .catch(err => alert(err.message));
 }
 </script>
 
