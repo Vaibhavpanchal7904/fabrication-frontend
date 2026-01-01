@@ -1,9 +1,11 @@
 /* =====================
-   GLOBAL IMPROVEMENTS
+   GLOBAL IDENTITY
 ===================== */
 :root {
   --primary: #f7941d;
-  --dark: #111;
+  --dark: #0f0f0f;
+  --steel: #1a1a1a;
+  --steel-light: #2a2a2a;
   --light-gray: #f5f5f5;
 }
 
@@ -11,6 +13,7 @@ body {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.6;
   color: #333;
+  background: #fff;
 }
 
 /* NAV OFFSET */
@@ -24,94 +27,105 @@ body {
 .hero-section {
   position: relative;
   height: 92vh;
-  background: url("../images/hero/hero.jpg") center/cover no-repeat;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(0,0,0,0.85),
+      rgba(0,0,0,0.55)
+    ),
+    url("../images/hero/hero.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(0,0,0,0.65),
-    rgba(0,0,0,0.55)
-  );
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   color: #fff;
+  text-align: center;
 }
 
 .hero-content h1 {
-  font-size: 3.2rem;
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-size: 3.4rem;
+  font-weight: 900;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  text-shadow:
+    0 3px 0 rgba(0,0,0,0.6),
+    0 10px 35px rgba(0,0,0,0.9);
 }
 
 .hero-content p {
   font-size: 1.2rem;
-  opacity: 0.9;
+  color: #e5e5e5;
+  max-width: 750px;
+  margin: 12px auto 0;
 }
 
 /* =====================
-   SECTION TITLE
+   SECTION TITLES
 ===================== */
 .section-title {
   text-align: center;
-  margin: 70px 0 45px;
+  margin: 80px 0 45px;
   color: var(--primary);
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   position: relative;
 }
 
 .section-title::after {
   content: "";
-  width: 60px;
-  height: 3px;
-  background: var(--primary);
+  width: 80px;
+  height: 4px;
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      var(--primary),
+      transparent
+    );
   display: block;
-  margin: 12px auto 0;
+  margin: 14px auto 0;
 }
 
 /* =====================
-   SERVICES
+   SERVICES SECTION
 ===================== */
 .services-section {
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 
 .service-card {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 5px solid var(--primary);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transition: all 0.35s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 22px 50px rgba(0,0,0,0.25);
 }
 
 .service-card img {
   width: 100%;
-  height: 220px;
+  height: 230px;
   object-fit: cover;
 }
 
 .service-card h5 {
-  margin: 18px 0 8px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
+  margin: 20px 0 8px;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
 
 .service-card p {
-  padding: 0 18px 22px;
+  padding: 0 20px 24px;
   font-size: 0.95rem;
   color: #555;
 }
@@ -120,22 +134,27 @@ body {
    CTA SECTION
 ===================== */
 .cta-section {
-  background: #fff;
+  background:
+    linear-gradient(
+      135deg,
+      #0d0d0d,
+      #1a1a1a
+    );
   text-align: center;
-  padding: 70px 20px;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  padding: 80px 20px;
+  border-top: 5px solid var(--primary);
+  border-bottom: 5px solid var(--primary);
 }
 
 .cta-section h3 {
   color: var(--primary);
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 .cta-section p {
   font-size: 1.05rem;
-  color: #444;
+  color: #ccc;
 }
 
 /* =====================
@@ -143,51 +162,57 @@ body {
 ===================== */
 .about-section {
   position: relative;
-  background: url("../images/hero/about.jpg") center/cover no-repeat;
-  padding: 90px 20px;
-}
-
-.about-section .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.8),
+      rgba(0,0,0,0.8)
+    ),
+    url("../images/hero/about.jpg") center/cover no-repeat;
+  padding: 100px 20px;
 }
 
 .about-section .container {
   position: relative;
   z-index: 2;
+  text-align: center;
 }
 
 .about-section h2 {
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 .about-section p {
   max-width: 900px;
   margin: 15px auto 0;
   font-size: 1rem;
-  opacity: 0.95;
+  color: #e5e5e5;
 }
 
 /* =====================
    TESTIMONIALS
 ===================== */
 .testimonials {
-  padding-bottom: 70px;
+  padding-bottom: 80px;
 }
 
 .testimonial-card {
-  background: var(--primary);
-  color: #fff;
+  background:
+    linear-gradient(
+      135deg,
+      #f7941d,
+      #e68615
+    );
+  color: #111;
   padding: 35px 25px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
   transition: transform 0.3s ease;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.02);
 }
 
 .testimonial-card p {
@@ -196,7 +221,7 @@ body {
 }
 
 .testimonial-card h6 {
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.5px;
 }
 
@@ -205,9 +230,9 @@ body {
 ===================== */
 .footer {
   background: var(--dark);
-  color: #ccc;
+  color: #bbb;
   text-align: center;
-  padding: 18px;
+  padding: 20px;
   font-size: 0.9rem;
 }
 
@@ -215,13 +240,13 @@ body {
    BUTTONS
 ===================== */
 .call-btn {
-  background: #000;
+  background: var(--steel);
   color: var(--primary);
-  padding: 9px 20px;
-  border-radius: 25px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  transition: background 0.3s ease, color 0.3s ease;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
 .call-btn:hover {
@@ -235,11 +260,57 @@ body {
   background: transparent;
   font-size: 14px;
   margin-left: 5px;
+  font-weight: 600;
 }
 
 .lang-btn:hover {
   background: var(--primary);
   color: #fff;
+}
+
+/* =====================
+   SERVICES DROPDOWN
+===================== */
+@media (min-width: 992px) {
+  .services-dropdown {
+    position: relative;
+  }
+
+  .services-dropdown .custom-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 250px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px 0;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    border: none;
+    z-index: 9999;
+  }
+
+  .services-dropdown:hover .custom-dropdown {
+    display: block;
+  }
+
+  .custom-dropdown .dropdown-item {
+    padding: 12px 22px;
+    font-weight: 600;
+    color: #111;
+    transition: all 0.25s ease;
+  }
+
+  .custom-dropdown .dropdown-item:hover {
+    background: var(--primary);
+    color: #000;
+  }
+}
+
+@media (max-width: 991px) {
+  .services-dropdown .custom-dropdown {
+    display: none !important;
+  }
 }
 
 /* =====================
@@ -295,48 +366,193 @@ body {
     padding: 25px 20px;
   }
 }
-/* ================= SERVICES DROPDOWN ================= */
+/* ======================================================
+   INDUSTRIAL DEPTH & STEEL SOUL (FINAL LAYER)
+====================================================== */
 
-/* Desktop hover dropdown */
-@media (min-width: 992px) {
-  .services-dropdown {
-    position: relative;
+/* --------- Steel Grain Texture --------- */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      rgba(0,0,0,0.025) 1px,
+      transparent 1px
+    );
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --------- HERO POWER GLOW --------- */
+.hero-content h1 {
+  animation: heroPulse 6s ease-in-out infinite;
+}
+
+@keyframes heroPulse {
+  0%,100% {
+    text-shadow:
+      0 3px 0 rgba(0,0,0,0.6),
+      0 12px 35px rgba(0,0,0,0.9);
   }
-
-  .services-dropdown .custom-dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 240px;
-    background: #fff;
-    border-radius: 6px;
-    padding: 10px 0;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    border: none;
-    z-index: 9999;
-  }
-
-  .services-dropdown:hover .custom-dropdown {
-    display: block;
-  }
-
-  .custom-dropdown .dropdown-item {
-    padding: 10px 20px;
-    font-weight: 500;
-    color: #000;
-    transition: all 0.2s ease;
-  }
-
-  .custom-dropdown .dropdown-item:hover {
-    background: #f7941d;
-    color: #fff;
+  50% {
+    text-shadow:
+      0 3px 0 rgba(0,0,0,0.6),
+      0 18px 55px rgba(247,148,29,0.45);
   }
 }
 
-/* Mobile: disable hover dropdown */
-@media (max-width: 991px) {
-  .services-dropdown .custom-dropdown {
-    display: none !important;
+/* --------- SECTION CUT STEEL LINE --------- */
+.section-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0,0,0,0.2),
+    transparent
+  );
+  z-index: -1;
+}
+
+/* --------- SERVICE CARD HEAVY METAL FEEL --------- */
+.service-card {
+  position: relative;
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.15),
+    inset 0 -10px 30px rgba(0,0,0,0.15);
+  pointer-events: none;
+}
+
+/* --------- WELD SPARK SHINE --------- */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 35%,
+    rgba(255,255,255,0.45),
+    transparent 65%
+  );
+  opacity: 0;
+  transform: translateX(-120%);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+  transform: translateX(120%);
+  transition: transform 0.8s ease;
+}
+
+/* --------- IMAGE STEEL FINISH --------- */
+.service-card img {
+  filter: contrast(1.05) saturate(1.05);
+}
+
+.service-card:hover img {
+  filter: contrast(1.1) saturate(1.15);
+}
+
+/* --------- CTA = METAL PLATE --------- */
+.cta-section {
+  position: relative;
+}
+
+.cta-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.03) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  pointer-events: none;
+}
+
+/* --------- TESTIMONIAL FORGED BLOCK --------- */
+.testimonial-card {
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.25),
+    transparent 35%,
+    rgba(0,0,0,0.2)
+  );
+  pointer-events: none;
+}
+
+/* --------- FOOTER INDUSTRIAL EDGE --------- */
+.footer {
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--primary),
+    transparent
+  );
+}
+
+/* --------- BUTTON WEIGHT & PRESS --------- */
+.call-btn:active {
+  transform: scale(0.96);
+  box-shadow: inset 0 3px 8px rgba(0,0,0,0.4);
+}
+
+/* --------- SCROLL SMOOTH HEAVY --------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --------- MOBILE INDUSTRIAL POLISH --------- */
+@media (max-width: 576px) {
+
+  .hero-content h1 {
+    letter-spacing: 1px;
+  }
+
+  .service-card {
+    box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+  }
+
+  .testimonial-card {
+    box-shadow: 0 14px 32px rgba(0,0,0,0.28);
   }
 }

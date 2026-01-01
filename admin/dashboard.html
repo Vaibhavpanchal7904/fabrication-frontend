@@ -1,48 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Admin Dashboard</title>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard | Fabrication World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f4f4f4;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    /* NAVBAR */
+    .admin-navbar {
+      background: #111;
+      border-bottom: 3px solid #f7941d;
+    }
+
+    .admin-navbar .navbar-brand {
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #f7941d !important;
+    }
+
+    /* DASHBOARD TITLE */
+    .dashboard-title {
+      font-weight: 800;
+      color: #222;
+      margin-bottom: 25px;
+    }
+
+    /* CARDS */
+    .admin-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 35px 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      border-top: 5px solid #f7941d;
+      color: #111;
+    }
+
+    .admin-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    .admin-card h4 {
+      font-weight: 700;
+      margin-top: 15px;
+    }
+
+    .admin-card p {
+      color: #666;
+      margin-bottom: 0;
+    }
+
+    .admin-icon {
+      font-size: 42px;
+    }
+
+    /* LOGOUT */
+    .logout-btn {
+      background: #f7941d;
+      border: none;
+      font-weight: 600;
+    }
+
+    .logout-btn:hover {
+      background: #d87f10;
+    }
+
+    /* MOBILE */
+    @media(max-width:768px){
+      .admin-card {
+        padding: 25px 15px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<nav class="navbar navbar-dark bg-dark px-4">
-  <span class="navbar-brand">Fabrication Admin</span>
-  <button class="btn btn-danger" onclick="logout()">Logout</button>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar admin-navbar px-4">
+  <span class="navbar-brand">FABRICATION ADMIN</span>
+  <button class="btn logout-btn text-dark" onclick="logout()">Logout</button>
 </nav>
 
-<div class="container mt-4">
+<!-- ================= DASHBOARD ================= -->
+<div class="container mt-5">
+
+  <h3 class="dashboard-title">Admin Dashboard</h3>
+
   <div class="row g-4">
 
+    <!-- ENQUIRIES -->
     <div class="col-md-4">
-      <a href="enquiries.html" class="card text-center shadow p-4 text-decoration-none">
-        <h4>📩 Enquiries</h4>
-        <p>View & Manage</p>
+      <a href="enquiries.html" class="text-decoration-none">
+        <div class="admin-card">
+          <div class="admin-icon">📩</div>
+          <h4>Customer Enquiries</h4>
+          <p>View & manage customer requests</p>
+        </div>
       </a>
     </div>
 
+    <!-- IMAGES -->
     <div class="col-md-4">
-      <a href="images.html" class="card text-center shadow p-4 text-decoration-none">
-        <h4>🖼️ Images</h4>
-        <p>Category-wise Upload</p>
+      <a href="images.html" class="text-decoration-none">
+        <div class="admin-card">
+          <div class="admin-icon">🖼️</div>
+          <h4>Project Images</h4>
+          <p>Upload & manage service images</p>
+        </div>
       </a>
     </div>
 
+    <!-- TESTIMONIALS -->
     <div class="col-md-4">
-      <a href="testimonials.html" class="card text-center shadow p-4 text-decoration-none">
-        <h4>⭐ Testimonials</h4>
-        <p>Add / Manage</p>
+      <a href="testimonials.html" class="text-decoration-none">
+        <div class="admin-card">
+          <div class="admin-icon">⭐</div>
+          <h4>Testimonials</h4>
+          <p>Add & manage customer reviews</p>
+        </div>
       </a>
     </div>
 
   </div>
 </div>
 
+<!-- ================= JS ================= -->
 <script>
-function logout(){
-  localStorage.removeItem("adminToken");
-  window.location.href = "login.html";
-}
+  // PROTECT PAGE
+  if (!localStorage.getItem("adminToken")) {
+    window.location.href = "login.html";
+  }
+
+  function logout() {
+    localStorage.removeItem("adminToken");
+    window.location.href = "login.html";
+  }
 </script>
 
 </body>
