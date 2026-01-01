@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fabrication Services</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="public/assets/css/global.css">
+  <link rel="stylesheet" href="public/assets/css/home.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="index.html">FABRICATION</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <!-- SERVICES DROPDOWN -->
+        <li class="nav-item dropdown services-dropdown">
+          <a class="nav-link dropdown-toggle services-link" >
+            <span data-lang="en">SERVICES</span>
+            <span data-lang="gu">સેવાઓ</span>
+          </a>
+
+          <ul class="dropdown-menu custom-dropdown">
+            <li>
+              <a class="dropdown-item" href="services/iron-gate.html">
+                <span data-lang="en">IRON GATE</span>
+                <span data-lang="gu">આયર્ન ગેટ</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="services/staircase.html">
+                <span data-lang="en">STAIRCASE RAILING</span>
+                <span data-lang="gu">સ્ટેરકેસ રેલિંગ</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="services/boundary.html">
+                <span data-lang="en">BOUNDARY WALLS</span>
+                <span data-lang="gu">બાઉન્ડરી વોલ</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="services/roofing.html">
+                <span data-lang="en">ROOFING SHED</span>
+                <span data-lang="gu">રૂફિંગ શેડ</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="services/shutter.html">
+                <span data-lang="en">ROLLING SHUTTER</span>
+                <span data-lang="gu">રોલિંગ શટર</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="services/grill.html">
+                <span data-lang="en">IRON GRILL</span>
+                <span data-lang="gu">આયર્ન ગ્રિલ</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="services/custom.html">
+                <span data-lang="en">CUSTOM FABRICATION</span>
+                <span data-lang="gu">કસ્ટમ ફેબ્રિકેશન</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- ABOUT -->
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">
+            <span data-lang="en">About Us</span>
+            <span data-lang="gu">અમારા વિશે</span>
+          </a>
+        </li>
+
+        <!-- CONTACT -->
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">
+            <span data-lang="en">Contact Us</span>
+            <span data-lang="gu">સંપર્ક કરો</span>
+          </a>
+        </li>
+
+        <!-- LANGUAGE TOGGLE -->
+        <li class="nav-item ms-lg-3">
+          <button class="btn lang-btn" onclick="setLanguage('gu')">ગુજરાતી</button>
+          <button class="btn lang-btn" onclick="setLanguage('en')">EN</button>
+        </li>
+
+        <!-- CALL BUTTON -->
+        <li class="nav-item ms-lg-3">
+          <a class="btn call-btn" href="tel:8770826266">87708-26266</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-spacer"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content text-center">
+
+    <h1 data-lang="en">QUALITY IRON & STEEL FABRICATION WORKS</h1>
+    <h1 data-lang="gu">ગુણવત્તાવાળી આયર્ન અને સ્ટીલ ફેબ્રિકેશન સેવાઓ</h1>
+
+    <p data-lang="en">Since 1984</p>
+    <p data-lang="gu">1984 થી વિશ્વસનીય સેવા</p>
+
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="services-section container">
+
+  <h2 class="section-title" data-lang="en">OUR FABRICATION SERVICES</h2>
+  <h2 class="section-title" data-lang="gu">અમારી ફેબ્રિકેશન સેવાઓ</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="service-card">
+        <img src="public/assets/images/services/gate.jpg" alt="Iron Gate">
+        <h5 data-lang="en">GATES</h5>
+        <h5 data-lang="gu">ગેટ્સ</h5>
+        <p data-lang="en">Gates give the first impression to your property.</p>
+        <p data-lang="gu">ગેટ્સ તમારા ઘર અથવા દુકાનની પ્રથમ છાપ બનાવે છે.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="service-card">
+        <img src="public/assets/images/services/staircase.jpg" alt="Staircase Railing">
+        <h5 data-lang="en">STAIRCASE RAILING</h5>
+        <h5 data-lang="gu">સ્ટેરકેસ રેલિંગ</h5>
+        <p data-lang="en">Safety focused staircase railing solutions.</p>
+        <p data-lang="gu">સુરક્ષિત અને મજબૂત સ્ટેરકેસ રેલિંગ સેવા.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="service-card">
+        <img src="public/assets/images/services/boundary.jpg" alt="Boundary Wall">
+        <h5 data-lang="en">BOUNDARY WALLS</h5>
+        <h5 data-lang="gu">બાઉન્ડરી વોલ</h5>
+        <p data-lang="en">Strong & durable boundary solutions.</p>
+        <p data-lang="gu">મજબૂત અને લાંબા સમય સુધી ચાલતી બાઉન્ડરી.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-section">
+  <h3 data-lang="en">CALL NOW - 87708-26266</h3>
+  <h3 data-lang="gu">આજે જ ફોન કરો - 87708-26266</h3>
+
+  <p data-lang="en">To get affordable On-Site Fabrication Services</p>
+  <p data-lang="gu">સસ્તી અને વિશ્વસનીય ફેબ્રિકેશન સેવાઓ માટે</p>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about-section">
+  <div class="overlay"></div>
+  <div class="container text-center text-white">
+
+    <h2 data-lang="en">ABOUT US</h2>
+    <h2 data-lang="gu">અમારા વિશે</h2>
+
+    <p data-lang="en">
+      Fabrication World is a trusted name since 1984 providing quality fabrication services.
+    </p>
+
+    <p data-lang="gu">
+      ફેબ્રિકેશન વર્લ્ડ 1984 થી વિશ્વસનીય અને ગુણવત્તાવાળી ફેબ્રિકેશન સેવાઓ આપે છે.
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Fabrication Services</p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="public/assets/js/lang-toggle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+/* =====================
+   GLOBAL IMPROVEMENTS
+===================== */
+:root {
+  --primary: #f7941d;
+  --dark: #111;
+  --light-gray: #f5f5f5;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* NAV OFFSET */
+.nav-spacer {
+  height: 82px;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero-section {
+  position: relative;
+  height: 92vh;
+  background: url("../images/hero/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.55)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* =====================
+   SECTION TITLE
+===================== */
+.section-title {
+  text-align: center;
+  margin: 70px 0 45px;
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  display: block;
+  margin: 12px auto 0;
+}
+
+/* =====================
+   SERVICES
+===================== */
+.services-section {
+  padding-bottom: 40px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-card h5 {
+  margin: 18px 0 8px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.service-card p {
+  padding: 0 18px 22px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* =====================
+   CTA SECTION
+===================== */
+.cta-section {
+  background: #fff;
+  text-align: center;
+  padding: 70px 20px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.cta-section h3 {
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.cta-section p {
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* =====================
+   ABOUT SECTION
+===================== */
+.about-section {
+  position: relative;
+  background: url("../images/hero/about.jpg") center/cover no-repeat;
+  padding: 90px 20px;
+}
+
+.about-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-section h2 {
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.about-section p {
+  max-width: 900px;
+  margin: 15px auto 0;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* =====================
+   TESTIMONIALS
+===================== */
+.testimonials {
+  padding-bottom: 70px;
+}
+
+.testimonial-card {
+  background: var(--primary);
+  color: #fff;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h6 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  background: var(--dark);
+  color: #ccc;
+  text-align: center;
+  padding: 18px;
+  font-size: 0.9rem;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.call-btn {
+  background: #000;
+  color: var(--primary);
+  padding: 9px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.call-btn:hover {
+  background: var(--primary);
+  color: #000;
+}
+
+.lang-btn {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.lang-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* =====================
+   MOBILE RESPONSIVE
+===================== */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .call-btn {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 75vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    margin: 50px 0 30px;
+    font-size: 1.4rem;
+  }
+
+  .service-card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .testimonial-card {
+    padding: 25px 20px;
+  }
+}
+/* ================= SERVICES DROPDOWN ================= */
+
+/* Desktop hover dropdown */
+@media (min-width: 992px) {
+  .services-dropdown {
+    position: relative;
+  }
+
+  .services-dropdown .custom-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 240px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px 0;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    border: none;
+    z-index: 9999;
+  }
+
+  .services-dropdown:hover .custom-dropdown {
+    display: block;
+  }
+
+  .custom-dropdown .dropdown-item {
+    padding: 10px 20px;
+    font-weight: 500;
+    color: #000;
+    transition: all 0.2s ease;
+  }
+
+  .custom-dropdown .dropdown-item:hover {
+    background: #f7941d;
+    color: #fff;
+  }
+}
+
+/* Mobile: disable hover dropdown */
+@media (max-width: 991px) {
+  .services-dropdown .custom-dropdown {
+    display: none !important;
+  }
+}

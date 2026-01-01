@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iron Gate Fabrication | Fabrication World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+  content="Iron gate fabrication services in Indore. Custom metal gates, sliding gates & security gates since 1984.">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../public/assets/css/global.css">
+  <link rel="stylesheet" href="../public/assets/css/home.css">
+  <link rel="stylesheet" href="../public/assets/css/service.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="../index.html">FABRICATION</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <!-- SERVICES DROPDOWN -->
+        <li class="nav-item dropdown services-dropdown">
+          <a class="nav-link dropdown-toggle services-link"
+             role="button"
+             data-bs-toggle="dropdown">
+            <span data-lang="en">SERVICES</span>
+            <span data-lang="gu">સેવાઓ</span>
+          </a>
+
+          <ul class="dropdown-menu custom-dropdown">
+            <li><a class="dropdown-item" href="iron-gate.html">IRON GATE</a></li>
+            <li><a class="dropdown-item" href="staircase.html">STAIRCASE RAILING</a></li>
+            <li><a class="dropdown-item" href="boundary.html">BOUNDARY WALL</a></li>
+            <li><a class="dropdown-item" href="roofing.html">ROOFING SHED</a></li>
+            <li><a class="dropdown-item" href="shutter.html">ROLLING SHUTTER</a></li>
+            <li><a class="dropdown-item" href="grill.html">IRON GRILL</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../about.html">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../contact.html">Contact Us</a>
+        </li>
+
+        <li class="nav-item ms-lg-3">
+          <button class="btn lang-btn" onclick="setLanguage('gu')">ગુજરાતી</button>
+          <button class="btn lang-btn" onclick="setLanguage('en')">EN</button>
+        </li>
+
+        <li class="nav-item ms-lg-3">
+          <a class="btn call-btn" href="tel:8770826266">87708-26266</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-spacer"></div>
+
+<!-- ================= HERO ================= -->
+<section class="service-hero"
+style="background-image:url('../public/assets/images/services/gate-banner.jpg')">
+  <div class="overlay"></div>
+  <div class="container text-center">
+    <h1 data-lang="en">IRON GATE FABRICATION SERVICES</h1>
+    <h1 data-lang="gu">આયર્ન ગેટ ફેબ્રિકેશન સેવાઓ</h1>
+    <p>Home > Iron Gate</p>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section class="container service-content">
+
+  <h2 data-lang="en">IRON GATE FABRICATION WORKS</h2>
+  <h2 data-lang="gu">આયર્ન ગેટ ફેબ્રિકેશન કામ</h2>
+
+  <p data-lang="en">
+    Gates give the first impression to your property while providing security.
+  </p>
+
+  <p data-lang="gu">
+    ગેટ્સ તમારા ઘરની સુરક્ષા સાથે પ્રથમ છાપ બનાવે છે.
+  </p>
+
+  <ul class="service-points">
+    <li data-lang="en">Strong & durable iron gates</li>
+    <li data-lang="gu">મજબૂત અને લાંબા સમય ચાલે તેવા ગેટ્સ</li>
+
+    <li data-lang="en">Sliding & custom designs available</li>
+    <li data-lang="gu">સ્લાઇડિંગ અને કસ્ટમ ડિઝાઇન ઉપલબ્ધ</li>
+
+    <li data-lang="en">Cost effective fabrication</li>
+    <li data-lang="gu">ઓછા ખર્ચે ઉચ્ચ ગુણવત્તા</li>
+  </ul>
+</section>
+
+<!-- ================= IMAGE GALLERY (ADMIN CONTROLLED) ================= -->
+<section class="container service-gallery">
+
+  <h2 data-lang="en">GATE DESIGN IDEAS</h2>
+  <h2 data-lang="gu">ગેટ ડિઝાઇન આઇડિયાઝ</h2>
+
+  <div class="slider-wrapper">
+
+    <button class="slider-btn left" onclick="slideLeft()">❮</button>
+
+    <div class="slider-track" id="imageGallery"></div>
+
+    <button class="slider-btn right" onclick="slideRight()">❯</button>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+<section class="service-cta">
+  <h3 data-lang="en">CALL NOW - 87708-26266</h3>
+  <h3 data-lang="gu">આજે જ ફોન કરો - 87708-26266</h3>
+</section>
+
+<!-- ================= ENQUIRY ================= -->
+<section class="enquiry-box">
+
+  <h3 data-lang="en">SEND ENQUIRY</h3>
+  <h3 data-lang="gu">ઇનક્વાયરી મોકલો</h3>
+
+  <form id="serviceEnquiryForm" class="enquiry-form">
+    <input name="name" placeholder="Your Name / તમારું નામ" required>
+    <input name="phone" placeholder="Mobile No / મોબાઇલ નંબર" required>
+    <input type="hidden" name="interest" value="Iron Gate">
+    <textarea name="message" placeholder="Message / સંદેશ"></textarea>
+    <button type="submit">SUBMIT</button>
+    <p id="msg"></p>
+  </form>
+
+</section>
+
+<!-- ================= JS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../public/assets/js/lang-toggle.js"></script>
+
+<script>
+// ================= LOAD ADMIN UPLOADED IMAGES =================
+const API_BASE = "https://fabrication-backend.onrender.com";
+
+fetch(`${API_BASE}/api/images/iron-gate`)
+  .then(res => res.json())
+  .then(images => {
+    const gallery = document.getElementById("imageGallery");
+    gallery.innerHTML = images.map(img => `
+      <div class="slider-item">
+        <img src="${API_BASE}/uploads/${img.image}">
+      </div>
+    `).join("");
+  })
+  .catch(err => console.error("Image load error:", err));
+
+// ================= SUBMIT ENQUIRY =================
+document.getElementById("serviceEnquiryForm")
+.addEventListener("submit", async e => {
+  e.preventDefault();
+
+  const f = e.target;
+  const data = {
+    name: f.name.value,
+    phone: f.phone.value,
+    interest: "Iron Gate",
+    message: f.message.value
+  };
+
+  try {
+    const res = await fetch(`${API_BASE}/api/enquiries`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    const r = await res.json();
+    msg.innerText = r.success
+      ? "Enquiry Sent Successfully ✅"
+      : "Error ❌";
+  } catch (err) {
+    msg.innerText = "Server error ❌";
+  }
+});
+</script>
+
+<script>
+const slider = document.getElementById("imageGallery");
+
+function slideLeft(){
+  slider.scrollBy({ left: -320, behavior: "smooth" });
+}
+
+function slideRight(){
+  slider.scrollBy({ left: 320, behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>

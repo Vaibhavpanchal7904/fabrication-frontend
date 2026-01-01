@@ -1,0 +1,226 @@
+/* SERVICE HERO */
+.service-hero {
+  height: 55vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.service-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.service-hero h1 {
+  color: #fff;
+  font-weight: 800;
+}
+
+/* CONTENT */
+.service-content {
+  padding: 70px 0;
+}
+
+.service-content h2 {
+  color: #f7941d;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.service-points {
+  margin-top: 20px;
+}
+
+.service-points li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.service-points li::before {
+  content: "•";
+  color: #f7941d;
+  position: absolute;
+  left: 0;
+}
+
+/* CTA */
+.service-cta {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* GALLERY */
+.service-gallery {
+  padding-bottom: 60px;
+}
+
+.service-gallery img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ENQUIRY */
+.enquiry-box {
+  background: #f7941d;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.enquiry-form {
+  max-width: 900px;
+  margin: auto;
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+.enquiry-form button {
+  background: #111;
+  color: #fff;
+  padding: 12px 40px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+}
+/* ================= SERVICES DROPDOWN ================= */
+
+/* Desktop hover dropdown */
+@media (min-width: 992px) {
+  .services-dropdown {
+    position: relative;
+  }
+
+  .services-dropdown .custom-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 240px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px 0;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    border: none;
+    z-index: 9999;
+  }
+
+  .services-dropdown:hover .custom-dropdown {
+    display: block;
+  }
+
+  .custom-dropdown .dropdown-item {
+    padding: 10px 20px;
+    font-weight: 500;
+    color: #000;
+    transition: all 0.2s ease;
+  }
+
+  .custom-dropdown .dropdown-item:hover {
+    background: #f7941d;
+    color: #fff;
+  }
+}
+
+/* Mobile: disable hover dropdown */
+@media (max-width: 991px) {
+  .services-dropdown .custom-dropdown {
+    display: none !important;
+  }
+}
+/* ================= FABRICATION IMAGE SLIDER ================= */
+
+.service-gallery {
+  margin: 80px auto;
+  position: relative;
+}
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+/* Hide scrollbar */
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-item {
+  min-width: 300px;
+  max-width: 300px;
+  height: 220px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.slider-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.slider-item:hover img {
+  transform: scale(1.08);
+}
+
+/* SLIDER BUTTONS */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #111;
+  color: #f7941d;
+  border: none;
+  font-size: 28px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.slider-btn.left { left: -10px; }
+.slider-btn.right { right: -10px; }
+
+.slider-btn:hover {
+  background: #f7941d;
+  color: #000;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .slider-item {
+    min-width: 240px;
+    height: 180px;
+  }
+
+  .slider-btn {
+    display: none;
+  }
+}

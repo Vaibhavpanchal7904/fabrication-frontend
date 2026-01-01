@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Fabrication World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="public/assets/css/home.css">
+  <link rel="stylesheet" href="public/assets/css/contact.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="index.html">FABRICATION</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">
+            <span data-lang="en">SERVICES</span>
+            <span data-lang="gu">સેવાઓ</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">
+            <span data-lang="en">ABOUT US</span>
+            <span data-lang="gu">અમારા વિશે</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="contact.html">
+            <span data-lang="en">CONTACT US</span>
+            <span data-lang="gu">સંપર્ક કરો</span>
+          </a>
+        </li>
+
+        <!-- LANGUAGE -->
+        <li class="nav-item ms-lg-3">
+          <button class="btn lang-btn" onclick="setLanguage('gu')">ગુજરાતી</button>
+          <button class="btn lang-btn" onclick="setLanguage('en')">EN</button>
+        </li>
+
+        <!-- CALL -->
+        <li class="nav-item ms-lg-3">
+          <a class="btn call-btn" href="tel:8770826266">87708-26266</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-spacer"></div>
+
+<!-- ================= HERO ================= -->
+<section class="contact-hero">
+  <div class="overlay"></div>
+  <div class="container text-center">
+
+    <h1 data-lang="en">CONTACT US</h1>
+    <h1 data-lang="gu">સંપર્ક કરો</h1>
+
+    <p data-lang="en">Home &gt; Contact Us</p>
+    <p data-lang="gu">હોમ &gt; સંપર્ક કરો</p>
+
+  </div>
+</section>
+
+<!-- ================= GET IN TOUCH ================= -->
+<section class="contact-section container">
+
+  <h2 data-lang="en">GET IN TOUCH</h2>
+  <h2 data-lang="gu">અમારો સંપર્ક કરો</h2>
+
+  <div class="row g-4 align-items-stretch">
+
+    <!-- FORM -->
+    <div class="col-lg-6">
+      <div class="contact-form-box">
+
+     <form id="contactForm">
+
+  <!-- NAME -->
+  <input
+    type="text"
+    name="name"
+    id="name"
+    placeholder="Your Name"
+    required
+  >
+
+  <!-- PHONE -->
+  <input
+    type="text"
+    name="phone"
+    id="phone"
+    placeholder="Mobile No"
+    required
+  >
+
+  <!-- EMAIL -->
+  <input
+    type="email"
+    name="email"
+    id="email"
+    placeholder="Email Id"
+  >
+
+  <!-- INTEREST -->
+  <select name="interest" id="interest">
+    <option value="">Your Interest</option>
+    <option value="Iron Gate">Iron Gate</option>
+    <option value="Staircase Railing">Staircase Railing</option>
+    <option value="Roofing Shed">Roofing Shed</option>
+    <option value="Custom Fabrication">Custom Fabrication</option>
+  </select>
+
+  <!-- MESSAGE -->
+  <textarea
+    name="message"
+    id="message"
+    rows="4"
+    placeholder="Your Message"
+  ></textarea>
+
+  <button type="submit">SUBMIT</button>
+
+  <p id="formMsg"></p>
+</form>
+
+
+
+      </div>
+    </div>
+
+    <!-- MAP / INFO -->
+    <div class="col-lg-6">
+      <div class="contact-info-box">
+
+        <h4 data-lang="en">OUR OFFICE</h4>
+        <h4 data-lang="gu">અમારું કાર્યાલય</h4>
+
+        <p data-lang="en">
+          Fabrication World,<br>
+          Chipra Bakhal, Indore (M.P)
+        </p>
+
+        <p data-lang="gu">
+          ફેબ્રિકેશન વર્લ્ડ,<br>
+          ચીપરા બાખલ, ઇંદોર (મ.પ્ર)
+        </p>
+
+        <iframe
+          src="https://www.google.com/maps?q=Indore&output=embed"
+          loading="lazy">
+        </iframe>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="contact-cta text-center">
+  <h3 data-lang="en">CALL NOW - 87708-26266</h3>
+  <h3 data-lang="gu">આજે જ ફોન કરો - 87708-26266</h3>
+
+  <p data-lang="en">For quick fabrication assistance</p>
+  <p data-lang="gu">ઝડપી ફેબ્રિકેશન સહાય માટે</p>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Fabrication World</p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="public/assets/js/lang-toggle.js"></script>
+
+<script src="public/assets/js/contact.js"></script>
+
+
+</body>
+</html>
