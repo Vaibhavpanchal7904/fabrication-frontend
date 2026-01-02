@@ -150,7 +150,9 @@
 
 <!-- ================= JS ================= -->
 <script>
-const API_BASE = "https://fabrication-backend.onrender.com";
+const API_BASE =  "https://fabrication-backend.onrender.com";
+
+
 const gallery = document.getElementById("gallery");
 
 /* LOAD ALL IMAGES */
@@ -162,7 +164,8 @@ function loadImages(){
         <tr>
           <td>${index + 1}</td>
           <td>
-            <img src="${API_BASE}/uploads/${img.image}" class="table-img">
+            <img src="${img.image}" class="table-img">
+
           </td>
           <td>${img.category}</td>
           <td>${img.image}</td>
@@ -189,8 +192,9 @@ function upload(){
   const fd = new FormData();
   fd.append("image", imageInput.files[0]);
   fd.append("category", categoryInput.value);
+fetch(`${API_BASE}/api/images?category=${categoryInput.value}`, {
 
-  fetch(`${API_BASE}/api/images`, {
+
     method: "POST",
     headers: {
       Authorization: `Bearer ${localStorage.getItem("adminToken")}`

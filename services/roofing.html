@@ -332,7 +332,7 @@ fetch(`${API_BASE}/api/images/roofing`)
   .then(images => {
     imageGallery.innerHTML = images.map(img => `
       <div class="slider-item">
-        <img src="${API_BASE}/uploads/${img.image}">
+       <img src="${img.image}">
       </div>
     `).join("");
   });

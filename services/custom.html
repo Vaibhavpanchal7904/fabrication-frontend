@@ -367,7 +367,7 @@ fetch(`${API_BASE}/api/images/custom`)
     const gallery = document.getElementById("imageGallery");
     gallery.innerHTML = images.map(img => `
       <div class="slider-item">
-        <img src="${API_BASE}/uploads/${img.image}">
+       <img src="${img.image}">
       </div>
     `).join("");
   })
