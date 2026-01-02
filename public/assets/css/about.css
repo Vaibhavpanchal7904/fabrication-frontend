@@ -32,40 +32,51 @@
 .about-hero {
   position: relative;
   height: 60vh;
-  background: url("../images/services/customfab.jpg") center/cover no-repeat;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.18),
+      rgba(0,0,0,0.08)
+    ),
+    url("../images/services/customfab.jpg") center/cover no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+
+  /* Image clarity */
+  filter: contrast(1.12) saturate(1.18);
+  image-rendering: -webkit-optimize-contrast;
 }
 
-.about-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    rgba(0,0,0,0.75),
-    rgba(0,0,0,0.45)
-  );
-}
+
+
 
 .about-hero h1 {
   position: relative;
-  color: white;
-  font-weight: 900;
+  z-index: 2;
+  color: #fff;
   font-size: 3rem;
-  letter-spacing: 2px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
+  text-align: center;
+
+  text-shadow:
+    0 3px 12px rgba(0,0,0,0.65),
+    0 18px 40px rgba(0,0,0,0.6);
+
   animation: fadeUp 1s ease forwards;
 }
 
 .about-hero p {
   position: relative;
-  color: #ddd;
-  margin-top: 10px;
-  animation: fadeUp 1.3s ease forwards;
+  z-index: 2;
+  color: #f1f1f1;
+  font-size: 1.05rem;
+  text-align: center;
 }
+
 
 /* ================= INTRO ================= */
 .about-intro {
@@ -344,5 +355,23 @@
 
   .about-section::before {
     width: 60px;
+  }
+}
+/* TEAM SLIDER IMAGE */
+.team-img {
+  height: 420px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 22px 50px rgba(0,0,0,0.25);
+
+  /* Image clarity */
+  filter: contrast(1.08) saturate(1.1);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .team-img {
+    height: 280px;
+    margin-bottom: 25px;
   }
 }

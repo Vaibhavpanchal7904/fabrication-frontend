@@ -1,4 +1,9 @@
 /* SERVICE HERO */
+.service-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
 .service-hero {
   height: 55vh;
   background-size: cover;
@@ -11,13 +16,31 @@
 .service-hero .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.15)
+  );
+  z-index: 1;
 }
 
+
 .service-hero h1 {
-  color: #fff;
-  font-weight: 800;
+  color: #f7941d; /* brand color */
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow:
+    0 3px 8px rgba(0,0,0,0.9),
+    0 0 20px rgba(0,0,0,0.6);
 }
+
+.service-hero p {
+  color: #ffffff;
+  font-size: 15px;
+  margin-top: 8px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.85);
+}
+
 
 /* CONTENT */
 .service-content {
@@ -262,4 +285,61 @@
   .service-points {
     padding-left: 5px;
   }
+}
+/* ================= SERVICE HERO IMAGES ================= */
+
+/* Iron Gate */
+.hero-iron-gate {
+  background-image: url("../images/services/gate.jpg");
+}
+
+/* Staircase */
+.hero-staircase {
+  background-image: url("../images/services/STAIRCASERAILING.jpg");
+}
+
+/* Boundary Wall */
+.hero-boundary {
+  background-image: url("../images/services/boundarywall.jpg");
+}
+
+/* Roofing Shed */
+.hero-roofing {
+  background-image: url("../images/services/roofingshade.jpg");
+}
+
+/* Rolling Shutter */
+.hero-shutter {
+  background-image: url("../images/services/rollingshutter.jpg");
+}
+
+/* Iron Grill */
+.hero-grill {
+  background-image: url("../images/services/grill-banner.jpg");
+}
+
+/* Custom Fabrication */
+.hero-custom {
+  background-image: url("../images/services/customfab.jpg");
+}
+/* ================= SLIDER DOTS ================= */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.slider-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-dots span.active {
+  background: var(--primary);
+  transform: scale(1.3);
 }

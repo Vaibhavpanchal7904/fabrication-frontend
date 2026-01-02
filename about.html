@@ -19,7 +19,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
   <div class="container">
 
-    <a class="navbar-brand fw-bold" href="index.html">FABRICATION</a>
+     <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+  <img src="public/assets/images/icons/durgafab.png"
+       alt="Durga Fabrication"
+       class="navbar-logo">
+  <span class="brand-text">DURGA FABRICATION</span>
+</a>
 
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
       <span class="navbar-toggler-icon"></span>
@@ -28,7 +33,7 @@
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
 
-        <!-- SERVICES DROPDOWN -->
+     <!-- SERVICES DROPDOWN -->
         <li class="nav-item dropdown services-dropdown">
           <a class="nav-link dropdown-toggle services-link" >
             <span data-lang="en">SERVICES</span>
@@ -81,31 +86,29 @@
           </ul>
         </li>
 
-        <!-- ABOUT -->
         <li class="nav-item">
           <a class="nav-link" href="about.html">
-            <span data-lang="en">About Us</span>
+            <span data-lang="en">ABOUT US</span>
             <span data-lang="gu">અમારા વિશે</span>
           </a>
         </li>
 
-        <!-- CONTACT -->
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">
-            <span data-lang="en">Contact Us</span>
+          <a class="nav-link active" href="contact.html">
+            <span data-lang="en">CONTACT US</span>
             <span data-lang="gu">સંપર્ક કરો</span>
           </a>
         </li>
 
-        <!-- LANGUAGE TOGGLE -->
+        <!-- LANGUAGE -->
         <li class="nav-item ms-lg-3">
           <button class="btn lang-btn" onclick="setLanguage('gu')">ગુજરાતી</button>
           <button class="btn lang-btn" onclick="setLanguage('en')">EN</button>
         </li>
 
-        <!-- CALL BUTTON -->
+        <!-- CALL -->
         <li class="nav-item ms-lg-3">
-          <a class="btn call-btn" href="tel:8770826266">87708-26266</a>
+          <a class="btn call-btn" href="tel:8770826266">84601-23832</a>
         </li>
 
       </ul>
@@ -113,9 +116,7 @@
   </div>
 </nav>
 
-<div class="nav-spacer"></div>
-
-<!-- ================= HERO ================= -->
+<div class="nav-spacer"></div><!-- ================= HERO ================= -->
 <section class="about-hero">
   <div class="overlay"></div>
   <div class="container text-center">
@@ -192,42 +193,142 @@
 
   </div>
 </section>
-
-<!-- ================= TEAM ================= -->
+<!-- ================= TEAM (SLIDER) ================= -->
 <section class="about-section light-bg">
-  <div class="container row align-items-center">
+  <div class="container">
 
-    <div class="col-md-6 order-md-2">
-      <h3 data-lang="en">BEHIND THE SCENES / OUR TEAM</h3>
-      <h3 data-lang="gu">પર્દા પાછળ / અમારી ટીમ</h3>
+    <div class="row align-items-center">
 
-      <p data-lang="en">
-        Our skilled professionals and engineers ensure quality workmanship,
-        safety standards and timely project completion.
-      </p>
+      <!-- TEXT -->
+      <div class="col-md-6 order-md-2">
+        <h3 data-lang="en">BEHIND THE SCENES / OUR TEAM</h3>
+        <h3 data-lang="gu">પર્દા પાછળ / અમારી ટીમ</h3>
 
-      <p data-lang="gu">
-        અમારી અનુભવી ટીમ ગુણવત્તા, સુરક્ષા ધોરણો અને સમયસર
-        પ્રોજેક્ટ પૂર્ણતા સુનિશ્ચિત કરે છે.
-      </p>
-    </div>
+        <p data-lang="en">
+          Our skilled professionals and engineers ensure quality workmanship,
+          safety standards and timely project completion.
+        </p>
 
-    <div class="col-md-6 order-md-1">
-      <img src="public/assets/images/services/gate.jpg" class="img-fluid rounded" alt="">
+        <p data-lang="gu">
+          અમારી અનુભવી ટીમ ગુણવત્તા, સુરક્ષા ધોરણો અને સમયસર
+          પ્રોજેક્ટ પૂર્ણતા સુનિશ્ચિત કરે છે.
+        </p>
+      </div>
+
+      <!-- IMAGE SLIDER -->
+      <div class="col-md-6 order-md-1">
+
+        <div id="teamSlider" class="carousel slide" data-bs-ride="carousel">
+
+          <!-- SLIDES -->
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <img src="public/assets/images/services/gate.jpg"
+                   class="d-block w-100 team-img"
+                   alt="Fabrication Team at Work">
+            </div>
+
+            <div class="carousel-item">
+              <img src="public/assets/images/services/customfab.jpg"
+                   class="d-block w-100 team-img"
+                   alt="Welding & Fabrication Work">
+            </div>
+
+            <div class="carousel-item">
+              <img src="public/assets/images/services/shutter.jpg"
+                   class="d-block w-100 team-img"
+                   alt="Rolling Shutter Installation">
+            </div>
+
+          </div>
+
+          <!-- CONTROLS -->
+          <button class="carousel-control-prev" type="button"
+                  data-bs-target="#teamSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button"
+                  data-bs-target="#teamSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+
+      </div>
+
     </div>
 
   </div>
 </section>
 
+
 <!-- ================= CTA ================= -->
 <section class="about-cta text-center">
-  <h3 data-lang="en">CALL NOW - 87708-26266</h3>
-  <h3 data-lang="gu">આજે જ ફોન કરો - 87708-26266</h3>
+  <h3 data-lang="en">CALL NOW - 84601-23832</h3>
+  <h3 data-lang="gu">આજે જ ફોન કરો - 84601-23832</h3>
 
   <p data-lang="en">For reliable fabrication solutions</p>
   <p data-lang="gu">વિશ્વસનીય ફેબ્રિકેશન સેવાઓ માટે</p>
 </section>
+<div class="fab-services">
+  <button class="fab-toggle" onclick="toggleFab()">
+    <span data-lang="en">Services</span>
+    <span data-lang="gu">સેવાઓ</span>
+  </button>
 
+  <ul class="fab-menu">
+    <li>
+      <a href="services/iron-gate.html">
+        <span data-lang="en">Iron Gate</span>
+        <span data-lang="gu">આયર્ન ગેટ</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="services/staircase.html">
+        <span data-lang="en">Staircase Railing</span>
+        <span data-lang="gu">સ્ટેરકેસ રેલિંગ</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="services/boundary.html">
+        <span data-lang="en">Boundary Wall</span>
+        <span data-lang="gu">બાઉન્ડરી વોલ</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="services/roofing.html">
+        <span data-lang="en">Roofing Shed</span>
+        <span data-lang="gu">રૂફિંગ શેડ</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="services/shutter.html">
+        <span data-lang="en">Rolling Shutter</span>
+        <span data-lang="gu">રોલિંગ શટર</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="services/grill.html">
+        <span data-lang="en">Iron Grill</span>
+        <span data-lang="gu">આયર્ન ગ્રિલ</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="services/custom.html">
+        <span data-lang="en">Custom Fabrication</span>
+        <span data-lang="gu">કસ્ટમ ફેબ્રિકેશન</span>
+      </a>
+    </li>
+  </ul>
+</div>
 <!-- ================= FOOTER ================= -->
 <!-- FOOTER -->
 <div id="footer"></div>
@@ -239,7 +340,26 @@ fetch("footer.html")
     document.getElementById("footer").innerHTML = html;
   });
 </script>
+<script>
+function toggleFab() {
+  document.querySelector(".fab-services").classList.toggle("active");
+}
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const serviceLink = document.querySelector(".services-dropdown > .nav-link");
+  const serviceItem = document.querySelector(".services-dropdown");
 
+  if (serviceLink) {
+    serviceLink.addEventListener("click", (e) => {
+      if (window.innerWidth < 992) {
+        e.preventDefault();
+        serviceItem.classList.toggle("open");
+      }
+    });
+  }
+});
+</script>
 
 <!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

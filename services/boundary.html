@@ -23,7 +23,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
   <div class="container">
 
-    <a class="navbar-brand fw-bold" href="../index.html">FABRICATION</a>
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+  <img src="../public/assets/images/icons/durgafab.png"
+       alt="Durga Fabrication"
+       class="navbar-logo">
+  <span class="brand-text">DURGA FABRICATION</span>
+</a>
+
 
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
       <span class="navbar-toggler-icon"></span>
@@ -32,59 +38,7 @@
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
 
-        <!-- SERVICES DROPDOWN -->
-        <li class="nav-item dropdown services-dropdown">
-          <a class="nav-link dropdown-toggle services-link" >
-            <span data-lang="en">SERVICES</span>
-            <span data-lang="gu">સેવાઓ</span>
-          </a>
-
-          <ul class="dropdown-menu custom-dropdown">
-            <li>
-              <a class="dropdown-item" href="iron-gate.html">
-                <span data-lang="en">IRON GATE</span>
-                <span data-lang="gu">આયર્ન ગેટ</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="staircase.html">
-                <span data-lang="en">STAIRCASE RAILING</span>
-                <span data-lang="gu">સ્ટેરકેસ રેલિંગ</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="boundary.html">
-                <span data-lang="en">BOUNDARY WALLS</span>
-                <span data-lang="gu">બાઉન્ડરી વોલ</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="roofing.html">
-                <span data-lang="en">ROOFING SHED</span>
-                <span data-lang="gu">રૂફિંગ શેડ</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="shutter.html">
-                <span data-lang="en">ROLLING SHUTTER</span>
-                <span data-lang="gu">રોલિંગ શટર</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="grill.html">
-                <span data-lang="en">IRON GRILL</span>
-                <span data-lang="gu">આયર્ન ગ્રિલ</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="custom.html">
-                <span data-lang="en">CUSTOM FABRICATION</span>
-                <span data-lang="gu">કસ્ટમ ફેબ્રિકેશન</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-
+        
         <!-- ABOUT -->
         <li class="nav-item">
           <a class="nav-link" href="../about.html">
@@ -109,7 +63,7 @@
 
         <!-- CALL BUTTON -->
         <li class="nav-item ms-lg-3">
-          <a class="btn call-btn" href="tel:8770826266">87708-26266</a>
+          <a class="btn call-btn" href="tel:8770826266">84601-23832</a>
         </li>
 
       </ul>
@@ -121,7 +75,7 @@
 
 <!-- ================= HERO ================= -->
 <section class="service-hero"
-  style="background-image:url('../public/assets/images/services/compound-wall-banner.jpg')">
+  style="background-image:url('../public/assets/images/services/boundarywall.jpg')">
   <div class="overlay"></div>
   <div class="container text-center">
     <h1 data-lang="en">COMPOUND WALL FABRICATION WORKS</h1>
@@ -208,13 +162,29 @@
     <button class="slider-btn right" onclick="slideRight()">❯</button>
 
   </div>
-
+  <!-- 🔥 DOTS STATUS BAR -->
+  <div class="slider-dots" id="sliderDots"></div>
 </section>
 
-<!-- ================= CTA ================= -->
-<section class="service-cta">
-  <h3 data-lang="en">CALL NOW - 87708-26266</h3>
-  <h3 data-lang="gu">આજે જ ફોન કરો - 87708-26266</h3>
+<!-- ================= CONTACT CARD ================= -->
+<section class="contact-strip">
+  <div class="contact-box">
+
+    <h2 class="contact-title">
+      <span data-lang="en">CALL NOW -</span>
+      <span data-lang="gu">આજે જ ફોન કરો -</span>
+      <a href="tel:8770826266">84601-23832</a>
+    </h2>
+
+    <p class="contact-sub" data-lang="en">
+      To get affordable wire fencing fabrication works in Indore
+    </p>
+
+    <p class="contact-sub" data-lang="gu">
+      બોરસદમાંમાં સસ્તી વાયર ફેન્સિંગ ફેબ્રિકેશન કામ માટે
+    </p>
+
+  </div>
 </section>
 
 
@@ -332,7 +302,7 @@ fetch("footer.html")
 const API_BASE = "https://fabrication-backend.onrender.com";
 
 // ===== LOAD IMAGES =====
-fetch(`${API_BASE}/api/images/compound-wall`)
+fetch(`${API_BASE}/api/images/boundary`)
   .then(res => res.json())
   .then(images => {
     const gallery = document.getElementById("imageGallery");
