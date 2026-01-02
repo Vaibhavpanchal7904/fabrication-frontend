@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../public/assets/css/global.css">
   <link rel="stylesheet" href="../public/assets/css/home.css">
   <link rel="stylesheet" href="../public/assets/css/service.css">
+  <link rel="stylesheet" href="../public/assets/css/contact.css">
 </head>
 
 <body>
@@ -216,21 +217,100 @@
   <h3 data-lang="gu">આજે જ ફોન કરો - 87708-26266</h3>
 </section>
 
+
 <!-- ================= ENQUIRY ================= -->
-<section class="enquiry-box">
+<!-- ================= GET IN TOUCH ================= -->
+<section class="contact-section container">
 
-  <h3 data-lang="en">SEND ENQUIRY</h3>
-  <h3 data-lang="gu">ઇનક્વાયરી મોકલો</h3>
+  <h2 data-lang="en">GET IN TOUCH</h2>
+  <h2 data-lang="gu">અમારો સંપર્ક કરો</h2>
 
-  <form id="serviceEnquiryForm" class="enquiry-form">
-    <input name="name" placeholder="Your Name / તમારું નામ" required>
-    <input name="phone" placeholder="Mobile No / મોબાઇલ નંબર" required>
-    <input type="hidden" name="interest" value="Compound Wall">
-    <textarea name="message" placeholder="Message / સંદેશ"></textarea>
-    <button type="submit">SUBMIT</button>
-    <p id="msg"></p>
-  </form>
+  <div class="row g-4 align-items-stretch">
 
+    <!-- FORM -->
+    <div class="col-lg-6">
+      <div class="contact-form-box">
+
+     <form id="contactForm">
+
+  <!-- NAME -->
+  <input
+    type="text"
+    name="name"
+    id="name"
+    placeholder="Your Name"
+    required
+  >
+
+  <!-- PHONE -->
+  <input
+    type="text"
+    name="phone"
+    id="phone"
+    placeholder="Mobile No"
+    required
+  >
+
+  <!-- EMAIL -->
+  <input
+    type="email"
+    name="email"
+    id="email"
+    placeholder="Email Id"
+  >
+
+  <!-- INTEREST -->
+  <select name="interest" id="interest">
+    <option value="">Your Interest</option>
+    <option value="Iron Gate">Iron Gate</option>
+    <option value="Staircase Railing">Staircase Railing</option>
+    <option value="Roofing Shed">Roofing Shed</option>
+    <option value="Custom Fabrication">Custom Fabrication</option>
+  </select>
+
+  <!-- MESSAGE -->
+  <textarea
+    name="message"
+    id="message"
+    rows="4"
+    placeholder="Your Message"
+  ></textarea>
+
+  <button type="submit">SUBMIT</button>
+
+  <p id="formMsg"></p>
+</form>
+
+
+
+      </div>
+    </div>
+<!-- MAP / INFO -->
+    <div class="col-lg-6">
+      <div class="contact-info-box">
+
+        <h4 data-lang="en">OUR OFFICE</h4>
+        <h4 data-lang="gu">અમારું કાર્યાલય</h4>
+
+        <p data-lang="en">
+          Fabrication World,<br>
+          Chipra Bakhal, Indore (M.P)
+        </p>
+
+        <p data-lang="gu">
+          ફેબ્રિકેશન વર્લ્ડ,<br>
+          ચીપરા બાખલ, ઇંદોર (મ.પ્ર)
+        </p>
+
+        <iframe
+          src="https://www.google.com/maps?q=Indore&output=embed"
+          loading="lazy">
+        </iframe>
+
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- FOOTER -->
