@@ -18,6 +18,11 @@
 <!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
   <div class="container">
+    <!-- ADMIN LOGIN (HIDDEN) -->
+<li class="nav-item ms-lg-3 admin-login d-none">
+  <a class="btn btn-dark" href="admin/login.html">Admin</a>
+</li>
+
 
     <a class="navbar-brand fw-bold" href="index.html">FABRICATION</a>
 
@@ -378,6 +383,43 @@ setInterval(() => {
   slides[currentSlide].classList.add("active");
 }, 4500); // change image every 4.5s
 </script>
+<script>
+/*
+  ADMIN SECRET ACCESS
+  - Triple click on logo
+  - Prevents redirect when secret is triggered
+*/
+
+let logoClickCount = 0;
+let clickTimer = null;
+
+const logo = document.querySelector(".navbar-brand");
+const adminBtn = document.querySelector(".admin-login");
+
+logo.addEventListener("click", function (e) {
+  logoClickCount++;
+
+  // Stop normal navigation temporarily
+  e.preventDefault();
+
+  // Reset timer
+  clearTimeout(clickTimer);
+
+  if (logoClickCount === 3) {
+    adminBtn.classList.remove("d-none");
+    alert("Admin access enabled");
+    logoClickCount = 0;
+    return;
+  }
+
+  // If not triple-click, allow normal navigation after short delay
+  clickTimer = setTimeout(() => {
+    window.location.href = logo.getAttribute("href");
+    logoClickCount = 0;
+  }, 500);
+});
+</script>
+
 
 </body>
 </html>
