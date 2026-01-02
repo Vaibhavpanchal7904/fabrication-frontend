@@ -137,7 +137,20 @@
   bottom: 25px;
   right: 25px;
   z-index: 9999;
+   pointer-events: none;
 }
+/* 🔥 FIX: Re-enable FAB interaction */
+/* ✅ Allow menu interaction ONLY when open */
+.fab-services.active .fab-menu,
+.fab-services.active .fab-menu li,
+.fab-services.active .fab-menu li a {
+  pointer-events: auto;
+}
+.fab-toggle {
+  pointer-events: auto;
+}
+
+
 
 /* MAIN BUTTON */
 .fab-toggle {

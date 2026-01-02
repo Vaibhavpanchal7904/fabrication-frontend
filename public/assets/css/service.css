@@ -180,6 +180,10 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 10px;
+    /* 🔥 REQUIRED FOR MOBILE */
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+
 }
 
 /* Hide scrollbar */
@@ -196,6 +200,7 @@
   overflow: hidden;
   background: #000;
   box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+   scroll-snap-align: start;
 }
 
 .slider-item img {

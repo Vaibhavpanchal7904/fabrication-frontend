@@ -29,7 +29,7 @@
 </li>
 
 
-       <a class="navbar-brand d-flex align-items-center gap-2" href="../.html">
+       <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
   <img src="../public/assets/images/icons/durgafab.png"
        alt="Durga Fabrication"
        class="navbar-logo">
@@ -125,16 +125,21 @@
   <h2 data-lang="gu">ગેટ ડિઝાઇન આઇડિયાઝ</h2>
 
   <div class="slider-wrapper">
-
     <button class="slider-btn left" onclick="slideLeft()">❮</button>
 
-    <div class="slider-track" id="imageGallery"></div>
+    <!-- ✅ ONE gallery, ONE id -->
+    <div
+      class="slider-track"
+      id="imageGallery"
+      data-endpoint="iron-gate">
+    </div>
 
     <button class="slider-btn right" onclick="slideRight()">❯</button>
-
   </div>
-  <!-- 🔥 DOTS STATUS BAR -->
+
+  <!-- ✅ Status-bar dots -->
   <div class="slider-dots" id="sliderDots"></div>
+
 </section>
 
 
@@ -340,7 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
-
+<script src="../public/assets/js/img-load.js"></script>
 <script src="../public/assets/js/contact.js"></script>
 
 <script>
@@ -364,17 +369,19 @@ fetch(`${API_BASE}/api/images/iron-gate`)
   })
   .catch(err => console.error("Image load error:", err));
 
-
-
 const slider = document.getElementById("imageGallery");
 
-function slideLeft(){
-  slider.scrollBy({ left: -320, behavior: "smooth" });
+function slideLeft() {
+  const itemWidth = slider.querySelector(".slider-item")?.offsetWidth || 300;
+  slider.scrollBy({ left: -itemWidth, behavior: "smooth" });
 }
 
-function slideRight(){
-  slider.scrollBy({ left: 320, behavior: "smooth" });
+function slideRight() {
+  const itemWidth = slider.querySelector(".slider-item")?.offsetWidth || 300;
+  slider.scrollBy({ left: itemWidth, behavior: "smooth" });
 }
+
+
 </script>
 
 </body>
