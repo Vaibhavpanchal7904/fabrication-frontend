@@ -32,7 +32,7 @@
 .about-hero {
   position: relative;
   height: 60vh;
-  background: url("../images/hero/about-hero.jpg") center/cover no-repeat;
+  background: url("../images/services/customfab.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,7 +52,7 @@
 
 .about-hero h1 {
   position: relative;
-  color: #fff;
+  color: white;
   font-weight: 900;
   font-size: 3rem;
   letter-spacing: 2px;

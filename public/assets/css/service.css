@@ -224,3 +224,42 @@
     display: none;
   }
 }
+/* =====================
+   MOBILE CONTENT PADDING FIX
+===================== */
+@media (max-width: 768px) {
+
+  /* General container padding */
+  .container {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  /* Service content section */
+  .service-content {
+    padding: 50px 15px;
+  }
+
+  /* Service gallery */
+  .service-gallery {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Contact section */
+  .contact-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Hero text spacing */
+  .service-hero .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* List spacing */
+  .service-points {
+    padding-left: 5px;
+  }
+}

@@ -89,6 +89,81 @@ body {
   display: block;
   margin: 14px auto 0;
 }
+/* =====================
+   SERVICES DROPDOWN (FINAL)
+===================== */
+
+/* COMMON STYLES */
+.services-dropdown {
+  position: relative;
+}
+
+.services-dropdown .custom-dropdown {
+  min-width: 260px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 0;
+  border: none;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+  z-index: 9999;
+}
+
+.custom-dropdown .dropdown-item {
+  padding: 12px 22px;
+  font-weight: 600;
+  color: #111;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background: var(--primary);
+  color: #000;
+}
+
+/* =====================
+   DESKTOP (HOVER)
+===================== */
+@media (min-width: 992px) {
+
+  .services-dropdown .custom-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .services-dropdown:hover .custom-dropdown {
+    display: block;
+  }
+
+  .services-dropdown > .nav-link::after {
+    margin-left: 6px;
+  }
+}
+
+/* =====================
+   MOBILE (CLICK)
+===================== */
+@media (max-width: 991px) {
+
+  .services-dropdown .custom-dropdown {
+    display: none;
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding-left: 14px;
+    background: transparent;
+  }
+
+  .services-dropdown.open .custom-dropdown {
+    display: block;
+  }
+
+  .custom-dropdown .dropdown-item {
+    padding: 10px 16px;
+  }
+}
+
 
 /* =====================
    SERVICES SECTION
@@ -268,10 +343,40 @@ body {
   color: #fff;
 }
 
+.service-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* COMMON */
+.services-dropdown .custom-dropdown {
+  min-width: 260px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 0;
+  border: none;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+}
+
+.custom-dropdown .dropdown-item {
+  padding: 12px 22px;
+  font-weight: 600;
+  color: #111;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background: #f6f6f6;
+  color: #000;
+}
+
 /* =====================
-   SERVICES DROPDOWN
+   DESKTOP (HOVER)
 ===================== */
 @media (min-width: 992px) {
+
   .services-dropdown {
     position: relative;
   }
@@ -281,12 +386,6 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 250px;
-    background: #fff;
-    border-radius: 6px;
-    padding: 10px 0;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-    border: none;
     z-index: 9999;
   }
 
@@ -294,22 +393,31 @@ body {
     display: block;
   }
 
-  .custom-dropdown .dropdown-item {
-    padding: 12px 22px;
-    font-weight: 600;
-    color: #111;
-    transition: all 0.25s ease;
-  }
-
-  .custom-dropdown .dropdown-item:hover {
-    background: var(--primary);
-    color: #000;
+  /* Remove bootstrap arrow animation issues */
+  .services-dropdown > .nav-link::after {
+    margin-left: 6px;
   }
 }
 
+/* =====================
+   MOBILE (CLICK)
+===================== */
 @media (max-width: 991px) {
+
   .services-dropdown .custom-dropdown {
-    display: none !important;
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding-left: 12px;
+    display: none;
+  }
+
+  .services-dropdown.open .custom-dropdown {
+    display: block;
+  }
+
+  .custom-dropdown .dropdown-item {
+    padding: 10px 16px;
   }
 }
 
@@ -344,7 +452,7 @@ body {
     font-size: 1.4rem;
   }
 
-  .service-card img {
+card img {
     height: 200px;
   }
 }
@@ -554,5 +662,83 @@ html {
 
   .testimonial-card {
     box-shadow: 0 14px 32px rgba(0,0,0,0.28);
+  }
+}
+/* ================= HERO SLIDER ================= */
+.hero-section {
+  position: relative;
+  height: 92vh;
+  overflow: hidden;
+}
+
+.hero-slider {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1.5s ease, transform 6s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* OVERLAY */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.55)
+  );
+  z-index: 2;
+}
+
+/* CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-content h1 {
+  font-size: 3.4rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow:
+    0 3px 0 rgba(0,0,0,0.6),
+    0 10px 35px rgba(0,0,0,0.9);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #e5e5e5;
+  margin-top: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 75vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
   }
 }

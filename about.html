@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
 <!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
   <div class="container">
@@ -29,18 +28,63 @@
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
 
-        <!-- SERVICES -->
+        <!-- SERVICES DROPDOWN -->
         <li class="nav-item dropdown services-dropdown">
-          <a class="nav-link dropdown-toggle services-link" href="services.html">
+          <a class="nav-link dropdown-toggle services-link" >
             <span data-lang="en">SERVICES</span>
             <span data-lang="gu">સેવાઓ</span>
           </a>
+
+          <ul class="dropdown-menu custom-dropdown">
+            <li>
+              <a class="dropdown-item" href="services/iron-gate.html">
+                <span data-lang="en">IRON GATE</span>
+                <span data-lang="gu">આયર્ન ગેટ</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="services/staircase.html">
+                <span data-lang="en">STAIRCASE RAILING</span>
+                <span data-lang="gu">સ્ટેરકેસ રેલિંગ</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="services/boundary.html">
+                <span data-lang="en">BOUNDARY WALLS</span>
+                <span data-lang="gu">બાઉન્ડરી વોલ</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="services/roofing.html">
+                <span data-lang="en">ROOFING SHED</span>
+                <span data-lang="gu">રૂફિંગ શેડ</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="services/shutter.html">
+                <span data-lang="en">ROLLING SHUTTER</span>
+                <span data-lang="gu">રોલિંગ શટર</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="services/grill.html">
+                <span data-lang="en">IRON GRILL</span>
+                <span data-lang="gu">આયર્ન ગ્રિલ</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="services/custom.html">
+                <span data-lang="en">CUSTOM FABRICATION</span>
+                <span data-lang="gu">કસ્ટમ ફેબ્રિકેશન</span>
+              </a>
+            </li>
+          </ul>
         </li>
 
         <!-- ABOUT -->
         <li class="nav-item">
-          <a class="nav-link active" href="about.html">
-            <span data-lang="en">ABOUT US</span>
+          <a class="nav-link" href="about.html">
+            <span data-lang="en">About Us</span>
             <span data-lang="gu">અમારા વિશે</span>
           </a>
         </li>
@@ -48,18 +92,18 @@
         <!-- CONTACT -->
         <li class="nav-item">
           <a class="nav-link" href="contact.html">
-            <span data-lang="en">CONTACT US</span>
+            <span data-lang="en">Contact Us</span>
             <span data-lang="gu">સંપર્ક કરો</span>
           </a>
         </li>
 
-        <!-- LANGUAGE -->
+        <!-- LANGUAGE TOGGLE -->
         <li class="nav-item ms-lg-3">
           <button class="btn lang-btn" onclick="setLanguage('gu')">ગુજરાતી</button>
           <button class="btn lang-btn" onclick="setLanguage('en')">EN</button>
         </li>
 
-        <!-- CALL -->
+        <!-- CALL BUTTON -->
         <li class="nav-item ms-lg-3">
           <a class="btn call-btn" href="tel:8770826266">87708-26266</a>
         </li>
@@ -123,7 +167,7 @@
     </div>
 
     <div class="col-md-6">
-      <img src="public/assets/images/about/who-we-are.jpg" class="img-fluid rounded" alt="">
+      <img src="public/assets/images/services/boundarywall.jpg" class="img-fluid rounded" alt="">
     </div>
 
   </div>
@@ -169,7 +213,7 @@
     </div>
 
     <div class="col-md-6 order-md-1">
-      <img src="public/assets/images/about/team.jpg" class="img-fluid rounded" alt="">
+      <img src="public/assets/images/services/gate.jpg" class="img-fluid rounded" alt="">
     </div>
 
   </div>
