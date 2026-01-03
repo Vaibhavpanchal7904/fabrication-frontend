@@ -164,7 +164,9 @@ function loadImages(){
         <tr>
           <td>${index + 1}</td>
           <td>
-            <img src="${img.image}" class="table-img">
+            
+            
+            <img src="${img.image.replace('http://', 'https://')} class="table-img">
 
           </td>
           <td>${img.category}</td>

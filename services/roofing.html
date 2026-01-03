@@ -352,7 +352,7 @@ fetch(`${API_BASE}/api/images/roofing`)
   .then(images => {
     imageGallery.innerHTML = images.map(img => `
       <div class="slider-item">
-       <img src="${img.image}">
+       <img src="${img.image.replace('http://', 'https://')}">
       </div>
     `).join("");
   });

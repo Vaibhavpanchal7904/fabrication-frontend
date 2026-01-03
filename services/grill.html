@@ -381,7 +381,7 @@ fetch(`${API_BASE}/api/images/grill`)
     const gallery = document.getElementById("imageGallery");
     gallery.innerHTML = images.map(img => `
       <div class="slider-item">
-       <img src="${img.image}">
+       <img src="${img.image.replace('http://', 'https://')}">
       </div>
     `).join("");
   })
