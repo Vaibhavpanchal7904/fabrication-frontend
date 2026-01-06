@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://durgafabrication.pages.dev/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://durgafabrication.pages.dev/about.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://durgafabrication.pages.dev/gallery.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://durgafabrication.pages.dev/contact.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- SERVICES -->
+
+  <url>
+    <loc>https://durgafabrication.pages.dev/services/iron-gate.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://durgafabrication.pages.dev/services/staircase.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://durgafabrication.pages.dev/services/boundary.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://durgafabrication.pages.dev/services/roofing.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://durgafabrication.pages.dev/services/fineart.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://durgafabrication.pages.dev/services/grill.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://durgafabrication.pages.dev/services/custom.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
